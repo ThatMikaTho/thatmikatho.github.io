@@ -1,6 +1,6 @@
 # QGIS Expression builder
 
-# Minimal Circle
+## Minimal Circle
 	make_circle(
 		centroid(@geometry),
 		distance(
@@ -9,7 +9,7 @@
 		)
 	)
 	
-# Simplify & Smooth
+## Simplify & Smooth
 	smooth(
 		Simplify(
 		@geometry,
