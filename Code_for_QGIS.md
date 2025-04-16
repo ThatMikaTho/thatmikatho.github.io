@@ -52,20 +52,20 @@
 	
 ## Beveled Label callouts
 	with_variable(
-	'start',
-	make_point("auxiliary_storage_labeling_positionx", "auxiliary_storage_labeling_positiony"),
+		'start',
+		make_point("auxiliary_storage_labeling_positionx", "auxiliary_storage_labeling_positiony"),
 	with_variable(
-	'end',
-	centroid(@geometry),
+		'end',
+		centroid(@geometry),
 	with_variable(
-	'bevel',
-	50,  -- Adjust bevel position as needed (higher values push it closer to start/ end posisiton)
+		'bevel',
+		50,  -- Adjust bevel position as needed (higher values push it closer to start/ end position)
 	with_variable(
-	'bevel_start',
-	make_point(x(@start), y(@end) + @bevel),
+		'bevel_start',
+		make_point(x(@start), y(@end) + @bevel),
 	with_variable(
-	'bevel_end',
-	make_point(x(@start) - @bevel, y(@end)),
+		'bevel_end',
+		make_point(x(@start) - @bevel, y(@end)),
 	
 	-- line creation
 	make_line(@start, @bevel_start, @bevel_end, @end)
